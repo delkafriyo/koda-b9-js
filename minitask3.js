@@ -7,24 +7,23 @@ let fiveThousand = 0;
 let twoThousand = 0;
 let oneThousand = 0;
 
-for (change; change >= 50000; change -= 50000) {
-  fiftyThousand++;
-}
-
-for (change; change >= 10000; change -= 10000) {
-  tenThousand++;
-}
-
-for (change; change >= 50000; change -= 5000) {
-  fiveThousand++;
-}
-
-for (change; change >= 2000; change -= 2000) {
-  twoThousand++;
-}
-
-for (change; change >= 1000; change -= 1000) {
-  oneThousand++;
+while (change >= 1000) {
+  if (change >= 50000) {
+    fiftyThousand++;
+    change -= 50000;
+  } else if (change >= 10000) {
+    tenThousand++;
+    change -= 10000;
+  } else if (change >= 5000) {
+    fiveThousand++;
+    change -= 5000;
+  } else if (change >= 2000) {
+    twoThousand++;
+    change -= 2000;
+  } else {
+    oneThousand++;
+    change -= 1000;
+  }
 }
 
 console.log("Fifty Thousand = ", fiftyThousand);
