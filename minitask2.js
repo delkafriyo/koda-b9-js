@@ -12,6 +12,6 @@ if (cost < 500000) {
   totalCost = cost - 0.1 * cost;
 }
 
-console.log(cost);
-console.log(diskon);
-console.log(totalCost);
+console.log("Pembelian Rp. ", cost);
+console.log("Diskon ", diskon);
+console.log("Total Pembayaran Rp. ", totalCost);
